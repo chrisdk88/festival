@@ -6,12 +6,12 @@
 :root {
   --desktop-margin: 100px;
   --main-bg-one-color: #ffc107;
-  --main-bg-two-color: #ffc107;
+  --main-bg-two-color: #007bff;
 }
 
+/* --- WRAPPING EVERTHING EXCEPT  --- */
 .wrapper {
   margin: 0 var(--desktop-margin);
-  background-color: aqua;
 }
 
 /* --- NAVBAR --- */
@@ -62,8 +62,150 @@ header {
   margin-right: 10px;
   display: inline-block;
 }
+/* --- NAVBAR END --- */
+
+/* --- LOGIN innerHTML --- */
+#textLogin {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#loginForm2 {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group2 {
+  margin-bottom: 15px;
+}
+
+.form-group2 label {
+  display: block;
+}
+
+.form-group2 input[type="text"],
+.form-group2 input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.form-group2 input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.form-group2 input[type="submit"]:hover {
+  background-color: #4e4e4e;
+}
+
+.form-group2 input::placeholder {
+  padding-left: 4px;
+}
+
+.form-group2 input {
+  padding-left: 4px;
+}
+/* --- LOGIN innerHTML END --- */
 
 /* --- ONLY FOR TEST USE --- */
 .test ul li {
   display: inline-block;
+}
+
+.box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  margin-top: 30px;
+}
+
+.box {
+  display: flex;
+  border: 1px solid #ccc;
+  background-color: #007bff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.box img {
+  width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.box-info {
+  padding: 20px;
+  color: #fff;
+}
+
+.box-info h2 {
+  margin-top: 0;
+}
+.comment-button {
+  background-color: #4a4a4a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  height: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 320px;
+}
+
+.rating {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+}
+
+.rating label:before {
+  content: "\2605";
+  display: inline-block;
+}
+
+.rating input:checked ~ label:before {
+  color: orange;
+}
+
+.rating {
+  flex-direction: row-reverse;
+}
+.ad {
+  background-color: aqua;
+  height: 200px;
+  width: 1500px;
 }
