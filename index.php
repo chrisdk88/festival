@@ -102,7 +102,7 @@ $mysqli->close();
       <p>Her finder du de bedste festivals</p>
       <div class="box-container">
     <div class="box">
-      <img src="john.jpg" alt="Example Image">
+      <img src="images/logo.png" alt="Example Image">
       <button class="comment-button">Kommentar</button>
  
       <div class="box-info">
@@ -120,7 +120,7 @@ $mysqli->close();
   </div>
   <div class="box-container">
     <div class="box">
-      <img src="john.jpg" alt="Example Image">
+      <img src="images/logo.png" alt="Example Image">
       <button class="comment-button">Kommentar</button>
  
       <div class="box-info">
@@ -140,7 +140,7 @@ $mysqli->close();
 </div>
   <div class="box-container">
     <div class="box">
-      <img src="john.jpg" alt="Example Image">
+      <img src="images/logo.png" alt="Example Image">
       <button class="comment-button">Kommentar</button>
  
       <div class="box-info">
