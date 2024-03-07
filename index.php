@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($action == 'login') {
         $username = $data['username'] ?? '';
-        $password = $data['password'] ?? ''; // I det virkelige liv, bør passwordet hashes
+        $password = $data['password'] ?? ''; 
 
         $stmt = $mysqli->prepare('SELECT * FROM admin WHERE username = ?');
         $stmt->bind_param('s', $username);
