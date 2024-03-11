@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "content"
           ).innerHTML = `Velkommen, ${data.username}! <button onclick="logout()">Log ud</button>`;
         } else {
-          document.getElementById("content").innerHTML =
+          document.getElementById("fejl").innerHTML =
             "Login fejlede. Prøv igen.";
         }
       });

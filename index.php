@@ -2,15 +2,15 @@
 session_start();
 
 $response = ['loggedIn' => false];
+$login_error = '';
 
-// Opret forbindelse til databasen
+// Establish connection to the database
 $mysqli = new mysqli('localhost', 'root', '', 'festival');
 if ($mysqli->connect_error) {
     die('Connection Error: ' . $mysqli->connect_error);
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    header('Content-Type: application/json');
     $data = json_decode(file_get_contents('php://input'), true);
     $action = $data['action'] ?? '';
 
@@ -24,20 +24,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $result = $stmt->get_result();
         $admin = $result->fetch_assoc();
 
-        if ($admin && $admin['password'] === $password) {
+        if ($admin && password_verify($password, $admin['password'])) {
             $_SESSION['admin_logged_in'] = true;
             $_SESSION['username'] = $admin['username'];
             $response['loggedIn'] = true;
             $response['username'] = $admin['username'];
         }
         $stmt->close();
-        echo json_encode($response);
-        exit();
     } elseif ($action == 'logout') {
         session_destroy();
-        echo json_encode(['loggedIn' => false]);
-        exit();
+        $response['loggedIn'] = false;
     }
+    header('Content-Type: application/json');
+    echo json_encode($response);
+    exit();
 } elseif (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']) {
     $response['loggedIn'] = true;
     $response['username'] = $_SESSION['username'];
@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 $mysqli->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="da">
@@ -74,11 +75,8 @@ $mysqli->close();
         </form>
     <?php else: ?>
         <form action="index.php" method="post">
-            <input type="hidden" name="action" value="login">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="password" name="password" placeholder="Password" required>
+        
             <input type="submit" value="Login" data-page="login" id="loginbtn">
-            <a href="#" data-page="login">login</a>
         </form>
         <?php if ($login_error): ?>
             <p><?php echo $login_error; ?></p>
@@ -96,7 +94,9 @@ $mysqli->close();
         <li><a href="#" data-page="contact">Kontakt</a></li>
       </ul>
     </div>
-
+    <div id="fejl">
+        
+  </div>
     <div id="content">
       <h1>Virker dette?</h1>
       <p>Her finder du de bedste festivals</p>
