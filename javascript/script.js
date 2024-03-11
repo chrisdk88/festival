@@ -52,6 +52,52 @@ document.addEventListener("DOMContentLoaded", function () {
         content.innerHTML =
           "<h1>Velkommen tilbage!</h1><p>Vælg noget fra navbaren.</p>";
     }
+
+    // Funktion til at håndtere login-formular submit
+    window.submitLogin = function (event) {
+      event.preventDefault(); // Forhindrer standard formular submit adfærd
+
+      const username = document.getElementById("loginUsername").value;
+      const password = document.getElementById("loginPassword").value;
+
+      console.log("Login attempt with:", username, password);
+
+      fetch("login2.php", {
+        // Sørg for, at denne URL er korrekt
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ username: username, password: password }),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.text(); // Få svaret som tekst
+        })
+        .then((text) => {
+          try {
+            const data = JSON.parse(text); // Forsøg at parse teksten som JSON
+            console.log("Response as JSON:", data);
+            return data;
+          } catch (error) {
+            console.error("Failed to parse JSON:", text);
+            throw error; // Kast den originale fejl videre
+          }
+        })
+        .then((data) => {
+          if (data.success) {
+            alert("Du er nu logget ind.");
+          } else {
+            alert("Login fejlede. Prøv igen.");
+          }
+        })
+        .catch((error) => {
+          console.error("Error during fetch operation:", error);
+          alert("Der opstod en fejl under login. Se konsollen for detaljer.");
+        });
+    };
   }
 
   // Upon document load or when you need to update the UI based on login status.
