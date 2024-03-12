@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
           "<h1>Kontakt</h1><p>Her finder du de bedste festivals</p>";
         break;
       case "login":
-        // Tjek sessionen for at afgøre, om brugeren er logget ind
-        fetch("check_session.php") // check_session.php er en PHP-fil, der tjekker sessionens tilstand
+        // Check the session to determine if the user is logged in.
+        fetch("check_session.php") // check_session.php is a PHP file that checks the status of the session.
           .then((response) => response.json())
           .then((data) => {
             if (data.loggedIn) {
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
               content.innerHTML = `
                   <h1 id="textLogin">Admin login</h1>
-                  <form id="loginForm2">
+                  <form id="loginForm2" onsubmit="submitLogin(event);">
                     <div class="form-group2">
                       <label for="loginUsername">Brugernavn:</label>
                       <input type="text" id="loginUsername" name="username" placeholder="Indtast brugernavn">
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
                       <input type="password" id="loginPassword" name="password" placeholder="Indtast adgangskode">
                     </div>
                     <div class="form-group2">
-                      <button onclick="submitLogin(); return false;">Log ind</button>
+                      <button type="submit">Log ind</button>
                     </div>
                   </form>`;
             }
@@ -54,42 +54,61 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function submitLogin() {
-    var username = document.getElementById("loginUsername").value;
-    var password = document.getElementById("loginPassword").value;
-
-    fetch("index.php", {
+  // Upon document load or when you need to update the UI based on login status.
+  function checkLoginStatus() {
+    fetch("check_session.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        action: "login",
-        username: username,
-        password: password,
-      }),
+      body: JSON.stringify({ action: "checkLogin" }),
     })
       .then((response) => response.json())
       .then((data) => {
         if (data.loggedIn) {
-          document.getElementById(
-            "content"
-          ).innerHTML = `Velkommen, ${data.username}! <button onclick="logout()">Log ud</button>`;
+          document.getElementById("content").innerHTML = `
+                <div class="welcome-message">
+                    <p>Velkommen, ${data.username}!</p>
+                </div>
+                <form onsubmit="logout(); return false;">
+                    <input type="hidden" name="action" value="logout">
+                    <input type="submit" value="Log ud">
+                </form>`;
         } else {
-          document.getElementById("fejl").innerHTML =
-            "Login fejlede. Prøv igen.";
+          showLoginForm(); // Display the login form, implement this function according to your needs.
         }
       });
   }
 
-  function logout() {
+  function submitLogin(event) {
+    event.preventDefault(); // Prevents the form from submitting in the traditional way.
+
+    var formData = new FormData(document.getElementById("loginForm2"));
+
     fetch("index.php", {
+      // Change this to the correct file that handles the login logic.
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "logout" }),
-    }).then(() => {
-      // Opdater siden eller vis loginform igen
-      showLoginForm(); // Du skal implementere denne funktion
-    });
+      body: formData,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.loggedIn) {
+          // Login success
+          console.log("Login successful:", data.username);
+
+          // Updating the UI to show that the user is logged in.
+          document.getElementById(
+            "content"
+          ).innerHTML = `<p>Velkommen, ${data.username}!</p>`;
+        } else {
+          // Login failed, display an error message.
+          console.error("Login failed:", data.error);
+          // Update the DOM to display the error message.
+          document.getElementById("loginError").innerText = data.error;
+        }
+      })
+      .catch((error) => console.error("Error:", error));
   }
+
+  document.addEventListener("DOMContentLoaded", checkLoginStatus);
 
   // This function will change the content div
   function addClickListener(elementId, page) {
@@ -111,3 +130,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+

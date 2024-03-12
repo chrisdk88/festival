@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === true) {
+if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in'] === true) {
     // User is logged in
     $response = array(
         'loggedIn' => true,
