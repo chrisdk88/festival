@@ -1,4 +1,49 @@
-<?php include_once 'login.php';?>
+<?php
+session_start();
+
+// Erstat disse værdier med dine databaseoplysninger
+$dbHost = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'festival';
+
+// Opret forbindelse til databasen
+$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+
+// Tjek forbindelsen
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Modtag brugernavn og password fra formen
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = mysqli_real_escape_string($conn, $_POST['password']);
+
+    // Forbered en SQL-forespørgsel for at søge efter brugeren i databasen
+    $query = "SELECT id FROM admin WHERE username = '$username' AND password = '$password'";
+
+    // Udfør forespørgslen
+    $result = $conn->query($query);
+
+    // Tjek om brugeren findes
+    if ($result->num_rows == 1) {
+        // Brugeren er fundet, start en session
+        $_SESSION['username'] = $username;
+        $_SESSION['loggedin'] = true;
+    } else {
+        // Fejl i login
+        echo "Dit brugernavn eller kodeord er forkert.";
+    }
+}
+
+echo "<pre>";
+print_r($_POST);
+echo "</pre>";
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -19,19 +64,27 @@
         <h1>Festival ting</h1>
       </div>
       <div class="navbar-form">
-    <?php if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']) { ?>
-        <div class="welcome-message">
-            <p>Velkommen, <?= htmlspecialchars($_SESSION['username']); ?>!</p>
-            <?= $_SESSION['admin_logged_in'] ?>
-        </div>
-        <form action="index.php" method="post">
-          <a href="#" data-page="login" id="loginbtn">logud</a>
+    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
+        <!-- Brugeren er logget ind, vis logud-knappen -->
+        <form action="logout.php" method="post">
+            <div class="form-group">
+                <input type="submit" value="Log ud">
+            </div>
         </form>
-    <?php } else { ?>
-        <form action="index.php" method="post">          
-          <a href="#" data-page="login" id="loginbtn">login</a>
+    <?php else: ?>
+        <!-- Login formular -->
+        <form action="#" method="post">
+            <div class="form-group">
+                <input type="text" name="username" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="submit" id="loginbtn" value="Login">
+            </div>
         </form>
-    <?php } ?>
+    <?php endif; ?>
 </div>
     </nav>
   </header>
