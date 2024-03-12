@@ -1,48 +1,51 @@
 <?php
 session_start();
 
-// Erstat disse værdier med dine databaseoplysninger
-$dbHost = 'localhost';
+$dbHost = 'localhost'; // eller IP-adressen på din database-server
 $dbUsername = 'root';
 $dbPassword = '';
-$dbName = 'festival';
+$dbDatabase = 'festival';
 
-// Opret forbindelse til databasen
-$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbName);
+// Opret forbindelse
+$conn = new mysqli($dbHost, $dbUsername, $dbPassword, $dbDatabase);
 
 // Tjek forbindelsen
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+  die("Connection failed: " . $conn->connect_error);
 }
 
+// Kontrollerer om formular data er sendt
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Modtag brugernavn og password fra formen
-    $username = mysqli_real_escape_string($conn, $_POST['username']);
-    $password = mysqli_real_escape_string($conn, $_POST['password']);
+    // Hent data fra login-formularen
+    $formUsername = $_POST['username'];
+    $formPassword = $_POST['password']; // Bemærk: I virkelige applikationer bør du hashe og salte passwords.
 
-    // Forbered en SQL-forespørgsel for at søge efter brugeren i databasen
-    $query = "SELECT id FROM admin WHERE username = '$username' AND password = '$password'";
+    // Forbered SQL for at undgå SQL-injection
+    $stmt = $conn->prepare("SELECT * FROM admin WHERE username = ? AND password = ?");
+    $stmt->bind_param("ss", $formUsername, $formPassword);
 
     // Udfør forespørgslen
-    $result = $conn->query($query);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    // Tjek om brugeren findes
-    if ($result->num_rows == 1) {
-        // Brugeren er fundet, start en session
-        $_SESSION['username'] = $username;
-        $_SESSION['loggedin'] = true;
+    if ($result->num_rows > 0) {
+        // Success, brugernavn og password matcher
+        echo "Login succesfuldt!";
+        // Her kan du omdirigere brugeren til en anden side eller sætte sessionsvariabler
     } else {
         // Fejl i login
-        echo "Dit brugernavn eller kodeord er forkert.";
+        echo "Forkert brugernavn eller password!";
     }
+
+    // Luk forbindelsen
+    $stmt->close();
+    $conn->close();
+} else {
+    // Vis login formular, eller andet indhold hvis der ikke er sendt data
+    // Husk at beskytte mod direkte adgang til scriptet, hvis det er nødvendigt
 }
-
-echo "<pre>";
-print_r($_POST);
-echo "</pre>";
-
-$conn->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="da">
@@ -74,16 +77,10 @@ $conn->close();
     <?php else: ?>
         <!-- Login formular -->
         <form action="#" method="post">
-            <div class="form-group">
-                <input type="text" name="username" id="username" placeholder="Username">
-            </div>
-            <div class="form-group">
-                <input type="password" id="password" name="password" placeholder="Password">
-            </div>
-            <div class="form-group">
-                <input type="submit" id="loginbtn" value="Login">
-            </div>
-        </form>
+        Brugernavn: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
     <?php endif; ?>
 </div>
     </nav>
