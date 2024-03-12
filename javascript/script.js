@@ -16,21 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "<h1>Kontakt</h1><p>Her finder du de bedste festivals</p>";
         break;
       case "login":
-        // Check the session to determine if the user is logged in.
-        fetch("check_session.php") // check_session.php is a PHP file that checks the status of the session.
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.loggedIn) {
-              content.innerHTML = `
-                  <div class="welcome-message">
-                    <p>Velkommen, ${data.username}!</p>
-                  </div>
-                  <form action="index.php" method="post">
-                    <input type="hidden" name="action" value="logout">
-                    <input type="submit" value="Log ud">
-                  </form>`;
-            } else {
-              content.innerHTML = `
+        content.innerHTML = `
                   <h1 id="textLogin">Admin login</h1>
                   <form action="index.php" id="loginForm2" method="post" onsubmit="submitLogin(event);">
                   <div class="form-group2">
@@ -45,8 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     <button type="submit">Log ind</button>
                   </div>
                 </form>`;
-            }
-          });
         break;
       default:
         content.innerHTML =
@@ -63,7 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   addClickListener("logo", "home");
-  addClickListener("loginbtn", "login");
 
   // Listen to clicks on all a tags
   document.querySelectorAll("a").forEach((link) => {

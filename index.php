@@ -101,6 +101,7 @@ exit;
         <li><a href="#" data-page="home">Hjem</a></li>
         <li><a href="#" data-page="about">Om Os</a></li>
         <li><a href="#" data-page="contact">Kontakt</a></li>
+        <li><a href="#" data-page="login">Login</a></li>
       </ul>
     </div>
 
