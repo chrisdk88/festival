@@ -37,6 +37,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Forkert brugernavn eller password!";
     }
 
+    $_SESSION['loggedin'] = true;
+$_SESSION['username'] = $formUsername; // Gemmer brugernavnet i sessionen
+
+// Redirect til index.php eller en anden sikker side
+header('Location: index.php');
+exit;
+
+
     // Luk forbindelsen
     $stmt->close();
     $conn->close();
@@ -69,6 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <div class="navbar-form">
     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
         <!-- Brugeren er logget ind, vis logud-knappen -->
+        <p>Velkommen, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
         <form action="logout.php" method="post">
             <div class="form-group">
                 <input type="submit" value="Log ud">
