@@ -54,7 +54,16 @@ exit;
 }
 ?>
 
-
+<script>
+    function toggleComments(boxNumber) {
+      var comments = document.getElementById('comments_' + boxNumber);
+      if (comments.style.display === 'none') {
+        comments.style.display = 'block';
+      } else {
+        comments.style.display = 'none';
+      }
+    }
+  </script>
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -167,22 +176,44 @@ exit;
       </div>
       <div class="side-by-side-container-bottom">
         <div class="left-side-bottom">
-          <a href="#" class="eventBtn">Create Comment</a>
-          <a href="#" class="eventBtn">Read Comment</a>
+          <a href="#" class="eventBtn"onclick="toggleComments(1)">Kommentar</a>
         </div>
         <div class="right-side-bottom">
           <div class="rating">
             <h3>Rating</h3>
-            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
-            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+            <input type="radio" id="star5_1" name="rating_1" value="5"><label for="star5_1"></label>
+            <input type="radio" id="star4_1" name="rating_1" value="4"><label for="star4_1"></label>
+            <input type="radio" id="star3_1" name="rating_1" value="3"><label for="star3_1"></label>
+            <input type="radio" id="star2_1" name="rating_1" value="2"><label for="star2_1"></label>
+            <input type="radio" id="star1_1" name="rating_1" value="1"><label for="star1_1"></label>
           </div>
         </div>
+        
       </div>
+      <div class="comments" id="comments_1" style="display: none;">
+  <div class="comment-box">
+                <textarea rows="4" cols="50" placeholder="Add your comment here..."></textarea>
+                <button onclick="submitComment(1)">Submit</button>
+            </div>
+    <div class="comment">
+        <p><strong>User1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
+    <div class="comment">
+        <p><strong>User2:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User3:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User4:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User5:</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+           
+        </div>
 
+    </div>
     <div class="containerEvent">
       <div class="headerEvent">
         <h2>ROSKILDE FESTIVAL</h2>
@@ -247,20 +278,41 @@ exit;
       </div>
       <div class="side-by-side-container-bottom">
         <div class="left-side-bottom">
-          <a href="#" class="eventBtn">Create Comment</a>
-          <a href="#" class="eventBtn">Read Comment</a>
+          <a href="#" class="eventBtn"onclick="toggleComments(2)">Kommentar</a>
         </div>
         <div class="right-side-bottom">
           <div class="rating">
             <h3>Rating</h3>
-            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
-            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+            <input type="radio" id="star5_2" name="rating_2" value="5"><label for="star5_2"></label>
+            <input type="radio" id="star4_2" name="rating_2" value="4"><label for="star4_2"></label>
+            <input type="radio" id="star3_2" name="rating_2" value="3"><label for="star3_2"></label>
+            <input type="radio" id="star2_2" name="rating_2" value="2"><label for="star2_2"></label>
+            <input type="radio" id="star1_2" name="rating_2" value="1"><label for="star1_2"></label>
           </div>
         </div>
       </div>
+      <div class="comments" id="comments_2" style="display: none;">
+  <div class="comment-box">
+                <textarea rows="4" cols="50" placeholder="Add your comment here..."></textarea>
+                <button onclick="submitComment(2)">Submit</button>
+            </div>
+    <div class="comment">
+        <p><strong>User1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User2:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User3:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User4:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User5:</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+           
+        </div>
     </div>
     
     <div class="ad"></div>
@@ -330,21 +382,43 @@ exit;
       </div>
       <div class="side-by-side-container-bottom">
         <div class="left-side-bottom">
-          <a href="#" class="eventBtn">Create Comment</a>
-          <a href="#" class="eventBtn">Read Comment</a>
+          <a href="#" class="eventBtn"onclick="toggleComments(3)">Kommentar</a>
         </div>
         <div class="right-side-bottom">
           <div class="rating">
             <h3>Rating</h3>
-            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
-            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+            <input type="radio" id="star5_3" name="rating_3" value="5"><label for="star5_3"></label>
+            <input type="radio" id="star4_3" name="rating_3" value="4"><label for="star4_3"></label>
+            <input type="radio" id="star3_3" name="rating_3" value="3"><label for="star3_3"></label>
+            <input type="radio" id="star2_3" name="rating_3" value="2"><label for="star2_3"></label>
+            <input type="radio" id="star1_3" name="rating_3" value="1"><label for="star1_3"></label>
           </div>
         </div>
       </div>
+      <div class="comments" id="comments_3" style="display: none;">
+  <div class="comment-box">
+                <textarea rows="4" cols="50" placeholder="Add your comment here..."></textarea>
+                <button onclick="submitComment(3)">Submit</button>
+            </div>
+    <div class="comment">
+        <p><strong>User1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
+    <div class="comment">
+        <p><strong>User2:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User3:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User4:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div class="comment">
+        <p><strong>User5:</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+           
+        </div>
+    </div>
+    
   </div>
 
   <footer>
