@@ -75,23 +75,23 @@ exit;
         <h1>Festival ting</h1>
       </div>
       <div class="navbar-form">
-    <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
-        <!-- Brugeren er logget ind, vis logud-knappen -->
-        <p>Velkommen, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
-        <form action="logout.php" method="post">
-            <div class="form-group">
-                <input type="submit" value="Log ud">
-            </div>
+        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
+            <!-- Brugeren er logget ind, vis logud-knappen -->
+            <p>Velkommen, <?php echo htmlspecialchars($_SESSION['username']); ?>!</p>
+            <form action="logout.php" method="post">
+                <div class="form-group">
+                    <input type="submit" value="Log ud">
+                </div>
+            </form>
+        <?php else: ?>
+            <!-- Login formular -->
+            <form action="#" method="post">
+            Brugernavn: <input type="text" name="username"><br>
+            Password: <input type="password" name="password"><br>
+            <input type="submit" value="Login">
         </form>
-    <?php else: ?>
-        <!-- Login formular -->
-        <form action="#" method="post">
-        Brugernavn: <input type="text" name="username"><br>
-        Password: <input type="password" name="password"><br>
-        <input type="submit" value="Login">
-    </form>
-    <?php endif; ?>
-</div>
+        <?php endif; ?>
+      </div>
     </nav>
   </header>
 
@@ -105,66 +105,87 @@ exit;
       </ul>
     </div>
 
-    <div id="content">
-      <h1>Virker dette?</h1>
-      <p>Her finder du de bedste festivals</p>
-      <div class="box-container">
-    <div class="box">
-      <img src="images/logo.png" alt="Example Image">
-      <button class="comment-button">Kommentar</button>
-
-      <div class="box-info">
-        <h2>Information Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem suscipit quibusdam, ad eius eum modi repudiandae, alias voluptas, provident doloribus libero? Sequi sapiente quas excepturi debitis error reprehenderit labore non odio similique quos ipsa quisquam obcaecati aut, quibusdam dolores vero at aliquam nulla in rem sunt, modi nihil? Ullam cum officiis tempore eligendi iste, accusamus voluptatibus quae nisi eum velit deleniti placeat, consequatur officia fugiat numquam, similique est ea soluta aperiam repudiandae aspernatur. Debitis saepe voluptatem asperiores harum molestias, doloremque eaque, nobis modi minima voluptatibus voluptatum culpa optio, soluta reprehenderit obcaecati ab? Pariatur aliquid placeat nam maxime veniam aspernatur doloremque repellendus sapiente doloribus asperiores modi esse iusto, facere exercitationem earum voluptate perspiciatis rerum recusandae repudiandae vel ea nisi. Hic, et molestiae vitae distinctio doloribus nulla ex harum quas ratione quae voluptas eveniet nihil rem impedit facere eaque ut quos ipsam? Quo, porro explicabo. Vitae libero blanditiis similique eligendi optio modi quae natus suscipit maiores incidunt minima repudiandae veniam nisi vel, inventore necessitatibus laborum voluptate deserunt esse. Molestiae rem itaque quisquam, assumenda doloribus commodi modi! Cumque sapiente illum voluptatum dicta ut soluta laboriosam, expedita,</p>
+    <div class="containerEvent">
+      <div class="headerEvent">
+        <h2>THY ROCK</h2>
       </div>
-      <div class="rating">
-      <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
-      <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-      <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-      <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-      <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
-    </div>
-    </div>
-  </div>
-  <div class="box-container">
-    <div class="box">
-      <img src="images/logo.png" alt="Example Image">
-      <button class="comment-button">Kommentar</button>
- 
-      <div class="box-info">
-        <h2>Information Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem suscipit quibusdam, ad eius eum modi repudiandae, alias voluptas, provident doloribus libero? Sequi sapiente quas excepturi debitis error reprehenderit labore non odio similique quos ipsa quisquam obcaecati aut, quibusdam dolores vero at aliquam nulla in rem sunt, modi nihil? Ullam cum officiis tempore eligendi iste, accusamus voluptatibus quae nisi eum velit deleniti placeat, consequatur officia fugiat numquam, similique est ea soluta aperiam repudiandae aspernatur. Debitis saepe voluptatem asperiores harum molestias, doloremque eaque, nobis modi minima voluptatibus voluptatum culpa optio, soluta reprehenderit obcaecati ab? Pariatur aliquid placeat nam maxime veniam aspernatur doloremque repellendus sapiente doloribus asperiores modi esse iusto, facere exercitationem earum voluptate perspiciatis rerum recusandae repudiandae vel ea nisi. Hic, et molestiae vitae distinctio doloribus nulla ex harum quas ratione quae voluptas eveniet nihil rem impedit facere eaque ut quos ipsam? Quo, porro explicabo. Vitae libero blanditiis similique eligendi optio modi quae natus suscipit maiores incidunt minima repudiandae veniam nisi vel, inventore necessitatibus laborum voluptate deserunt esse. Molestiae rem itaque quisquam, assumenda doloribus commodi modi! Cumque sapiente illum voluptatum dicta ut soluta laboriosam, expedita,</p>
+      <div class="side-by-side-container">
+        <div class="left-side-top">
+          <div class="gallery">
+            <h4>Galleri</h4>
+            <h4>1/1</h4>
+              <div class="image-slider">
+                <div class="arrow left-arrow">&lt;</div>
+                <img src="images/Thy-Rock-scene.jpg" alt="">
+                <div class="arrow right-arrow">&gt;</div>
+              </div>
+          </div>
+        </div>
+        <div class="right-side-top">
+          <div class="info">
+            <h5>Info:</h5>
+            <p>Thy Rock er en stor poprock-festival, der siden år 2000 har været afholdt på dyrskue-pladsen i Thisted.</p>
+            <h5>Dato:</h5>
+            <p>28 til d. 29 juni</p>
+          </div>
+          <div class="ticket-info">
+            <h4>Billetter</h4>
+            <div class="ticketEvent">
+              <h5>1-dags billet:</h5>
+              <h5>249,-</h5>
+            </div>
+            <div class="ticketEvent">
+              <h5>Alle-dags billet:</h5>
+              <h5>499,-</h5>
+            </div>
+            <div class="ticketEvent">
+              <h5>VIP billet:</h5>
+              <h5>999,-</h5>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="rating">
-      <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
-      <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-      <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-      <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-      <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
-    </div>
-    </div>
-  </div>
-  <div class="ad">
-</div>
-  <div class="box-container">
-    <div class="box">
-      <img src="images/logo.png" alt="Example Image">
-      <button class="comment-button">Kommentar</button>
- 
-      <div class="box-info">
-        <h2>Information Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem suscipit quibusdam, ad eius eum modi repudiandae, alias voluptas, provident doloribus libero? Sequi sapiente quas excepturi debitis error reprehenderit labore non odio similique quos ipsa quisquam obcaecati aut, quibusdam dolores vero at aliquam nulla in rem sunt, modi nihil? Ullam cum officiis tempore eligendi iste, accusamus voluptatibus quae nisi eum velit deleniti placeat, consequatur officia fugiat numquam, similique est ea soluta aperiam repudiandae aspernatur. Debitis saepe voluptatem asperiores harum molestias, doloremque eaque, nobis modi minima voluptatibus voluptatum culpa optio, soluta reprehenderit obcaecati ab? Pariatur aliquid placeat nam maxime veniam aspernatur doloremque repellendus sapiente doloribus asperiores modi esse iusto, facere exercitationem earum voluptate perspiciatis rerum recusandae repudiandae vel ea nisi. Hic, et molestiae vitae distinctio doloribus nulla ex harum quas ratione quae voluptas eveniet nihil rem impedit facere eaque ut quos ipsam? Quo, porro explicabo. Vitae libero blanditiis similique eligendi optio modi quae natus suscipit maiores incidunt minima repudiandae veniam nisi vel, inventore necessitatibus laborum voluptate deserunt esse. Molestiae rem itaque quisquam, assumenda doloribus commodi modi! Cumque sapiente illum voluptatum dicta ut soluta laboriosam, expedita,</p>
+      <div class="artist-list">
+        <h3>Artister:</h3>
+        <ul>
+          <li>TOBIAS RAHIM</li>
+          <li>SUSPEKT</li>
+          <li>RASMUS SEEBACH</li>
+          <li>BENJAMIN HAV & FAMILIEN</li>
+          <li>D-A-D</li>
+          <li>HUGORM</li>
+          <li>JONAH BLACKSMITH</li>
+          <li>INFERNAL</li>
+          <li>KANDIS</li>
+          <li>MD-DUO</li>
+          <li>KREBSFALCH</li>
+          <li>LIS SØRENSEN</li>
+          <li>MAANELAND</li>
+          <li>RED SOLARNA</li>
+          <li>INDIAN CANE</li>
+          <li>ROYA</li>
+          <li>BESKIDT</li>
+        </ul>
       </div>
-      <div class="rating">
-      <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
-      <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
-      <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
-      <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
-      <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+      <div class="side-by-side-container-bottom">
+        <div class="left-side-bottom">
+          <a href="#" class="eventBtn">Create Comment</a>
+          <a href="#" class="eventBtn">Read Comment</a>
+        </div>
+        <div class="right-side-bottom">
+          <div class="rating">
+            <h3>Rating</h3>
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+          </div>
+        </div>
+      </div>
     </div>
-    </div>
-  </div>
-    </div>
+    
+    <div class="ad"></div>
   </div>
 
   <script src="javascript/script.js"></script>
