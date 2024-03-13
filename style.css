@@ -267,8 +267,11 @@ header {
 }
 
 .rating h3 {
+  position: relative;
   color: var(--main-bg-two-color);
   font-size: 1.5rem;
+  bottom:15px;
+  right: 70px;
 }
 
 .rating input {
@@ -276,12 +279,14 @@ header {
 }
 
 .rating label {
+  position: relative;
   cursor: pointer;
   width: 20px;
   height: 20px;
   margin: 0;
   padding: 0;
   font-size: 25px;
+  left: 30px;
 }
 
 .rating label:before {
@@ -294,11 +299,15 @@ header {
 }
 
 .rating {
-  flex-direction: row-reverse;
+  display: flex;
+  flex-direction: row-reverse; 
 }
+
 
 .ad {
   background-color: aqua;
   height: 200px;
   width: 100%;
 }
+
+  
