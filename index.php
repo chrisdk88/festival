@@ -60,7 +60,7 @@ exit;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Festival</title>
+  <title>Festival Guiden</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -70,7 +70,7 @@ exit;
         <img src="images/logo.png" alt="Logo" data-page="home" id="logo">
       </div>
       <div class="navbar-title">
-        <h1>Festival ting</h1>
+        <h1>Festival Guiden</h1>
       </div>
       <div class="navbar-form">
         <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
@@ -124,7 +124,7 @@ exit;
             <h5>Info:</h5>
             <p>Thy Rock er en stor poprock-festival, der siden år 2000 har været afholdt på dyrskue-pladsen i Thisted.</p>
             <h5>Dato:</h5>
-            <p>28 til d. 29 juni</p>
+            <p>28 juni til d. 29 juni</p>
           </div>
           <div class="ticket-info">
             <h4>Billetter</h4>
@@ -182,11 +182,175 @@ exit;
         </div>
       </div>
     </div>
+
+    <div class="containerEvent">
+      <div class="headerEvent">
+        <h2>ROSKILDE FESTIVAL</h2>
+      </div>
+      <div class="side-by-side-container">
+        <div class="left-side-top">
+          <div class="gallery">
+            <h4>Galleri</h4>
+            <h4>1/1</h4>
+              <div class="image-slider">
+                <div class="arrow left-arrow">&lt;</div>
+                <img src="images/roskilde.jpg" alt="">
+                <div class="arrow right-arrow">&gt;</div>
+              </div>
+          </div>
+        </div>
+        <div class="right-side-top">
+          <div class="info">
+            <h5>Info:</h5>
+            <p>Roskilde Festival er en af de ældste og mest berømte musikfestivaler i Danmark. Festivalen er kendt for sin brede musikdækning, fra rock til elektronisk musik og alt derimellem. Udover musikken fokuserer festivalen også på samfundsengagement og velgørenhed.</p>
+            <h5>Dato:</h5>
+            <p>29 juni til d. 6 juli</p>
+          </div>
+          <div class="ticket-info">
+            <h4>Billetter</h4>
+            <div class="ticketEvent">
+              <h5>1-dags billet:</h5>
+              <h5>199,-</h5>
+            </div>
+            <div class="ticketEvent">
+              <h5>Alle-dags billet:</h5>
+              <h5>799,-</h5>
+            </div>
+            <div class="ticketEvent">
+              <h5>VIP billet:</h5>
+              <h5>1199,-</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="artist-list">
+        <h3>Artister:</h3>
+        <ul>
+          <li>TOBIAS RAHIM</li>
+          <li>SUSPEKT</li>
+          <li>RASMUS SEEBACH</li>
+          <li>BENJAMIN HAV & FAMILIEN</li>
+          <li>D-A-D</li>
+          <li>HUGORM</li>
+          <li>JONAH BLACKSMITH</li>
+          <li>INFERNAL</li>
+          <li>KANDIS</li>
+          <li>MD-DUO</li>
+          <li>KREBSFALCH</li>
+          <li>LIS SØRENSEN</li>
+          <li>MAANELAND</li>
+          <li>RED SOLARNA</li>
+          <li>INDIAN CANE</li>
+          <li>ROYA</li>
+          <li>BESKIDT</li>
+        </ul>
+      </div>
+      <div class="side-by-side-container-bottom">
+        <div class="left-side-bottom">
+          <a href="#" class="eventBtn">Create Comment</a>
+          <a href="#" class="eventBtn">Read Comment</a>
+        </div>
+        <div class="right-side-bottom">
+          <div class="rating">
+            <h3>Rating</h3>
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+          </div>
+        </div>
+      </div>
+    </div>
     
     <div class="ad"></div>
+
+    <div class="containerEvent">
+      <div class="headerEvent">
+        <h2>GRENÅ BEACH PARTY</h2>
+      </div>
+      <div class="side-by-side-container">
+        <div class="left-side-top">
+          <div class="gallery">
+            <h4>Galleri</h4>
+            <h4>1/1</h4>
+              <div class="image-slider">
+                <div class="arrow left-arrow">&lt;</div>
+                <img src="images/abc.jpg" alt="">
+                <div class="arrow right-arrow">&gt;</div>
+              </div>
+          </div>
+        </div>
+        <div class="right-side-top">
+          <div class="info">
+            <h5>Info:</h5>
+            <p>Over 10.000 festglade koncertgæster besøger hvert år Grenaa Strand, hvor Radio ABC holder årets fedeste fest – nemlig ABC Beach Party.
+            I mere end 20 år har Radio ABC Beach Party hver sommer skabt fest, glæde og fede oplevelser for tusindvis af koncertgæster, som på meget kort tid får hørt en masse god musik.</p>
+            <h5>Dato:</h5>
+            <p>13 juli</p>
+          </div>
+          <div class="ticket-info">
+            <h4>Billetter</h4>
+            <div class="ticketEvent">
+              <h5>1-dags billet:</h5>
+              <h5>349,-</h5>
+            </div>
+            <div class="ticketEvent">
+              <h5>Alle-dags billet:</h5>
+              <h5></h5>
+            </div>
+            <div class="ticketEvent">
+              <h5>VIP billet:</h5>
+              <h5>799,-</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="artist-list">
+        <h3>Artister:</h3>
+        <ul>
+          <li>TOBIAS RAHIM</li>
+          <li>SUSPEKT</li>
+          <li>RASMUS SEEBACH</li>
+          <li>BENJAMIN HAV & FAMILIEN</li>
+          <li>D-A-D</li>
+          <li>HUGORM</li>
+          <li>JONAH BLACKSMITH</li>
+          <li>INFERNAL</li>
+          <li>KANDIS</li>
+          <li>MD-DUO</li>
+          <li>KREBSFALCH</li>
+          <li>LIS SØRENSEN</li>
+          <li>MAANELAND</li>
+          <li>RED SOLARNA</li>
+          <li>INDIAN CANE</li>
+          <li>ROYA</li>
+          <li>BESKIDT</li>
+        </ul>
+      </div>
+      <div class="side-by-side-container-bottom">
+        <div class="left-side-bottom">
+          <a href="#" class="eventBtn">Create Comment</a>
+          <a href="#" class="eventBtn">Read Comment</a>
+        </div>
+        <div class="right-side-bottom">
+          <div class="rating">
+            <h3>Rating</h3>
+            <input type="radio" id="star5" name="rating" value="5"><label for="star5"></label>
+            <input type="radio" id="star4" name="rating" value="4"><label for="star4"></label>
+            <input type="radio" id="star3" name="rating" value="3"><label for="star3"></label>
+            <input type="radio" id="star2" name="rating" value="2"><label for="star2"></label>
+            <input type="radio" id="star1" name="rating" value="1"><label for="star1"></label>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- This script is only for testing how changing innerhtml it working -->
+  <footer>
+    <h4>Copyright &copy; Festival Guiden 2024</h4>
+  </footer>
+
   <script src="javascript/script.js"></script>
 </body>
 </html>
