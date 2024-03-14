@@ -80,46 +80,6 @@ exit;
                     <input type="submit" value="Log ud">
                 </div>
             </form>
-<!-- Create Event Modal -->
-<div id="createEventModal" class="modal" style="display: none;">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Create Event</h2>
-          
-            <div class="form-group">
-                <label for="eventName">Event Name:</label>
-                <input type="text" placeholder="Event Name" id="eventName" name="eventName" required>
-            </div>
-            <div class="form-group">
-                <label for="eventDate">Event Date:</label>
-                <input type="date" id="eventDate" name="eventDate" required>
-            </div>
-            <div class="form-group">
-                <label for="eventDescription">Event Description:</label>
-                <textarea id="eventDescription" placeholder="Event Description" name="eventDescription" rows="4" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="ticketPrice">Ticket Price:</label>
-                <input type="number" id="ticketPrice" placeholder="Ticket price" name="ticketPrice" min="0" required>
-            </div>
-            <div class="form-group">
-                <label for="Artisters">Artister</label>
-                <input type="text" id="Artisters" placeholder="Artist" name="Artisters" required>
-            </div>
-            <div class="form-group">
-        <label for="eventImage">Event Image:</label>
-        <input type="file" id="eventImage" name="eventImage" accept="image/*" required>
-      </div>
-            <div class="form-group">
-                <input type="submit" id="createEvent" value="Create the Event">
-            </div>
-    </div>
-</div>
-<!-- Button to open the modal -->
-
-<div class="createEvent">
-    <a id="openCreateEventModal">Create Event</a>
-</div>
         </div>
         <?php else: ?>
             <!-- Login formular -->
@@ -141,7 +101,102 @@ exit;
         <li><a href="#" data-page="contact">Kontakt</a></li>
         <li><a href="#" data-page="login">Login</a></li>
         <li><a href="#" class="btnEvent" data-page="createEvent">Opret event</a></li>
+        <li><a href="#" class="btnEvent" data-page="createEvent">Redigere event</a></li>
       </ul>
+    </div>
+
+    <!-- Edit event -->
+    <div class="containerEvent eventH4">
+      <h2>Tilføj event.</h2>
+      <div class="titleCreateEvent">
+        <h3>Titel</h3>
+        <input type="text" placeholder="Titel navn" value="abc">
+      </div>
+      <div class="topCreateEvent">
+        <div class="leftTopCreateEvent">
+          <h4>Start dato</h4>
+          <input type="date" value="2024-03-03">
+          <h4>Slut dato</h4>
+          <input type="date" value="2024-03-05">
+        </div>
+        <div class="rightTopCreateEvent">
+          <h4>1-dags billet</h4>
+          <input type="text" value="300">
+          <h4>Alle-dags billet</h4>
+          <input type="text" value="500">
+          <h4>VIP billet</h4>
+          <input type="text" value="2000">
+        </div>
+      </div>
+
+      <div class="topCreateEvent">
+        <div class="leftTopCreateEvent">
+          <h4>Beskrivelse af event</h4>
+          <textarea rows="4" type="text">abc kommer til stranden</textarea>
+        </div>
+        <div class="rightTopCreateEvent">
+          <h4>Tilføj artister (komma separeret)</h4>
+          <textarea rows="4" type="text">INFERNAL, JONAH BLACKSMITH, HUGORM, D-A-D, BENJAMIN HAV & FAMILIEN, RASMUS SEEBACH, SUSPEKT, TOBIAS RAHIM</textarea>
+        </div>
+      </div>
+
+      <div class="bottonCreateEvent">
+        <div class="leftBottomCreateEvent">
+          <h4>Tilføj billede</h4>
+          <input type="file">
+        </div>
+        <div class="rightBottomCreateEvent">
+          <h4>Tilføjet billeder</h4>
+            <img src="images/abc.jpg" alt="" class="miniature">
+        </div>
+      </div>
+    </div>
+
+    <!-- Create event -->
+    <div class="containerEvent eventH4">
+      <h2>Tilføj event.</h2>
+      <div class="titleCreateEvent">
+        <h3>Titel</h3>
+        <input type="text" placeholder="Titel navn">
+      </div>
+      <div class="topCreateEvent">
+        <div class="leftTopCreateEvent">
+          <h4>Start dato</h4>
+          <input type="date">
+          <h4>Slut dato</h4>
+          <input type="date">
+        </div>
+        <div class="rightTopCreateEvent">
+          <h4>1-dags billet</h4>
+          <input type="text">
+          <h4>Alle-dags billet</h4>
+          <input type="text">
+          <h4>VIP billet</h4>
+          <input type="text">
+        </div>
+      </div>
+
+      <div class="topCreateEvent">
+        <div class="leftTopCreateEvent">
+          <h4>Beskrivelse af event</h4>
+          <textarea rows="4" type="text"></textarea>
+        </div>
+        <div class="rightTopCreateEvent">
+          <h4>Tilføj artister (komma separeret)</h4>
+          <textarea rows="4" type="text"></textarea>
+        </div>
+      </div>
+
+      <div class="bottonCreateEvent">
+        <div class="leftBottomCreateEvent">
+          <h4>Tilføj billede</h4>
+          <input type="file">
+        </div>
+        <div class="rightBottomCreateEvent">
+          <h4>Tilføjet billeder</h4>
+          <p>Når man tilføjer et eller flere billeder, så kommer der miniature udgave af billederne.</p>
+        </div>
+      </div>
     </div>
     
     <!-- THY ROCK -->

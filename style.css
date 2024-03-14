@@ -374,8 +374,63 @@ header {
   bottom: 5px;
 }
 
-.test2 {
-  width: 50px;
+.topCreateEvent {
+  display: flex;
+}
+
+.leftTopCreateEvent {
+  width: 50%;
+  border: 2px solid var(--main-bg-two-color);
+  border-radius: 7px;
+  padding: 5px;
+  margin: 10px 5px 0 0;
+}
+
+.rightTopCreateEvent {
+  width: 50%;
+  border: 2px solid var(--main-bg-two-color);
+  border-radius: 7px;
+  padding: 5px;
+  margin: 10px 0 0 5px;
+}
+
+.leftTopCreateEvent textarea {
+  width: 95%;
+  padding: 5px;
+}
+
+.rightTopCreateEvent textarea {
+  width: 95%;
+  padding: 5px;
+}
+
+.bottonCreateEvent {
+  display: flex;
+}
+
+.leftBottomCreateEvent {
+  width: 25%;
+  border: 2px solid var(--main-bg-two-color);
+  border-radius: 7px;
+  padding: 5px;
+  margin: 10px 5px 0 0;
+}
+
+.rightBottomCreateEvent {
+  width: 75%;
+  border: 2px solid var(--main-bg-two-color);
+  border-radius: 7px;
+  padding: 5px;
+  margin: 10px 0 0 5px;
+}
+
+.miniature {
+  width: 25%;
+}
+
+.eventH4 h4,
+h3 {
+  margin: 5px 0;
 }
 
 /* --- BUTTON --- */
@@ -442,74 +497,4 @@ footer h4 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.createEvent {
-  position: relative;
-  right: 100px;
-  bottom: 20px;
-}
-/* Modal container */
-.modal {
-  display: none; /* Hidden by default */
-  position: relative; /* Stay in place */
-  z-index: 1000; /* Sit on top */
-  left: 0;
-  top: 400px;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-}
-
-/* Modal content */
-.modal-content {
-  background-color: #fefefe;
-  margin: 20% auto; /* 20% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Close button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-#eventImage {
-  position: relative;
-  left: 600px;
-  bottom: 20px;
-  color: #000000;
-}
-#ticketPrice {
-  position: relative;
-  right: 160px;
-}
-#eventDescription {
-  position: relative;
-  right: 90px;
-  top: 30px;
-}
-#createEvent {
-  position: relative;
-  left: 450px;
-  top: 10px;
-}
-#eventName {
-  position: relative;
-  right: 100px;
-}
-#Artisters {
-  position: relative;
-  left: 110px;
-  bottom: 20px;
 }
