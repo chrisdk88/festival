@@ -96,12 +96,13 @@ exit;
   <div class="wrapper">
     <div class="test">        
       <ul>
-        <li><a href="#" data-page="home">Hjem</a></li>
-        <li><a href="#" data-page="about">Om Os</a></li>
-        <li><a href="#" data-page="contact">Kontakt</a></li>
-        <li><a href="#" data-page="login">Login</a></li>
-        <li><a href="#" class="btnEvent" data-page="createEvent">Opret event</a></li>
-        <li><a href="#" class="btnEvent" data-page="editEvent">Redigere event</a></li>
+        <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
+          <li><a data-page="login">Login</a></li>
+          <li><a class="btnEvent" data-page="createEvent">Opret event</a></li>
+          <li><a class="btnEvent" data-page="editEvent">Redigere event</a></li>
+        <?php else: ?>
+          <li><a data-page="login">Login</a></li>
+        <?php endif; ?>
       </ul>
     </div>
 

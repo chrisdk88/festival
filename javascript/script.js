@@ -476,37 +476,9 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   }
 
-  function submitLogin(event) {
-    event.preventDefault(); // Prevents the form from submitting in the traditional way.
-
-    var formData = new FormData(document.getElementById("loginForm2"));
-
-    fetch("index.php", {
-      // Change this to the correct file that handles the login logic.
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.loggedIn) {
-          // Login success
-          console.log("Login successful:", data.username);
-
-          // Updating the UI to show that the user is logged in.
-          document.getElementById(
-            "content"
-          ).innerHTML = `<p>Velkommen, ${data.username}!</p>`;
-        } else {
-          // Login failed, display an error message.
-          console.error("Login failed:", data.error);
-          // Update the DOM to display the error message.
-          document.getElementById("loginError").innerText = data.error;
-        }
-      })
-      .catch((error) => console.error("Error:", error));
-  }
-
   document.addEventListener("DOMContentLoaded", checkLoginStatus);
+
+  updateContent("home");
 
   // This function will change the content div
   function addClickListener(elementId, page) {
