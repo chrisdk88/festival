@@ -157,10 +157,11 @@ header {
 
 .gallery h4 {
   text-align: center;
+  color: var(--main-bg-two-color);
 }
 
 .gallery img {
-  width: 80%;
+  width: 100%;
   display: block;
   margin: auto;
 }
@@ -234,6 +235,8 @@ header {
   border: 2px solid var(--main-bg-two-color);
   padding: 5px;
   border-radius: 8px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .artist-list ul li {
@@ -270,7 +273,7 @@ header {
   position: relative;
   color: var(--main-bg-two-color);
   font-size: 1.5rem;
-  bottom:15px;
+  bottom: 15px;
   right: 70px;
 }
 
@@ -300,15 +303,114 @@ header {
 
 .rating {
   display: flex;
-  flex-direction: row-reverse; 
+  flex-direction: row-reverse;
+}
+/* --- EVENT END --- */
+
+/* --- SPONSOR --- */
+.sponsor {
+  background-color: #8d8d8d;
+  height: 125px;
+  position: relative;
 }
 
+.sponsorText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.ad {
-  background-color: aqua;
-  height: 200px;
+.centerText {
+  text-align: center;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+/* --- COMMENTS --- */
+.comments {
   width: 100%;
+  position: relative;
+}
+
+.comment {
   margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.comment p {
+  margin: 0;
+}
+
+.comment strong {
+  color: #333;
+}
+
+.comment-box {
+  margin-top: 20px;
+}
+
+.comment-box textarea {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.comment-box button {
+  position: relative;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* --- MOBILE HEADER --- */
+  .navbar-form {
+    display: none;
+  }
+  .navbar-brand img {
+    left: 3%;
+  }
+
+  /* --- EVENT --- */
+  .wrapper {
+    margin: 0 3%;
+    max-width: 90%;
+  }
+  .side-by-side-container {
+    display: block;
+  }
+  .left-side-top {
+    width: 100%;
+  }
+  .arrow {
+    display: none;
+  }
+  .right-side-top {
+    width: 100%;
+  }
+  .info {
+    margin: 5px 0;
+  }
+  .side-by-side-container-bottom {
+    margin-top: 18px;
+  }
+  .artist-list ul li {
+    font-size: 1.2rem;
+  }
+
+  /* --- SPONSOR --- */
+  .centerText {
+    font-size: 1.1rem;
+  }
 }
 
 footer {
@@ -324,54 +426,3 @@ footer h4 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.comments{
-  width: 1280px;
-  position: relative;
-  left: 20px;
-  }
-
-  .comment {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-  }
-  
-  
-  .comment p {
-    margin: 0;
-  }
-  
-  
-  .comment strong {
-    color: #333;
-  }
-  
-  
-  .comment-box {
-    margin-top: 20px;
-  }
-  
-  
-  .comment-box textarea {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  
-  .comment-box button {
-    position: relative;
-    padding: 5px 10px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    bottom: 5px;
-  }
-
-  

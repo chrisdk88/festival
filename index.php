@@ -123,7 +123,7 @@ exit;
             <h4>1/1</h4>
               <div class="image-slider">
                 <div class="arrow left-arrow">&lt;</div>
-                <img src="images/Thy-Rock-scene.jpg" alt="">
+                  <img src="images/Thy-Rock-scene.jpg" alt="">
                 <div class="arrow right-arrow">&gt;</div>
               </div>
           </div>
@@ -197,19 +197,19 @@ exit;
                 <button onclick="submitComment(1)">Indsend</button>
             </div>
     <div class="comment">
-        <p><strong>Betina:</strong> Jeg gælder mig til THY rock</p>
+        <p><strong>Betina: </strong>Jeg gælder mig til THY rock</p>
     </div>
     <div class="comment">
-        <p><strong>Karsten:</strong>Jeg glæder mig så maget til at høre SUSPEKT</p>
+        <p><strong>Karsten: </strong>Jeg glæder mig så maget til at høre SUSPEKT</p>
     </div>
     <div class="comment">
-        <p><strong>Pia:</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perferendis obcaecati quibusdam ipsam soluta commodi fugit quasi incidunt excepturi? Illum hic ipsa ipsam aperiam, nesciunt, repellat facere veniam quidem tempore ea saepe a id corrupti, accusantium ex ipsum soluta! Voluptatem placeat, facere illum quisquam vero vel illo laudantium libero, accusamus cumque, veritatis iure nesciunt sint autem suscipit temporibus corporis harum dolore perferendis numquam. Modi vitae quo ipsum hic dolore at eos facere, excepturi distinctio molestiae, quas odio! Labore vitae excepturi non fuga voluptates enim magnam, nam iusto voluptate sunt rem, assumenda libero ipsa eum explicabo dolores incidunt ea. Neque, molestiae veritatis repellat ut sequi animi obcaecati praesentium porro nemo placeat quia explicabo minus repellendus facilis? Amet non nemo dolorem error aperiam incidunt sint totam quod voluptatibus, vel numquam modi consequatur blanditiis adipisci commodi iure fugiat suscipit! Rem saepe modi dolor sint ut sunt tenetur debitis, quisquam repellendus dicta, commodi inventore quo pariatur laboriosam veritatis quos excepturi molestias quis earum fugit officiis perspiciatis odio labore. Illo ullam at cupiditate, voluptatum quibusdam omnis corporis sequi accusantium? Magnam numquam fuga suscipit possimus sint. Eveniet nisi, quidem maiores fugit doloribus in facere eum, amet placeat odit beatae ut quia distinctio, vero laudantium magnam hic quam saepe ex inventore asperiores perspiciatis dolor quasi cum. Dignissimos atque ducimus harum. Doloribus labore dolores id earum neque sed nobis totam eveniet. Est, quod iusto laboriosam, unde vero quibusdam neque, fuga asperiores ex quisquam optio architecto commodi aperiam explicabo libero cum corporis quae similique mollitia incidunt? Est facilis accusantium ea suscipit quae itaque ullam sint placeat et magnam excepturi magni hic, nulla non odio quibusdam. Dolore optio aut eligendi! Maxime, doloribus ipsa sapiente aliquid esse odio tempora, a eius adipisci iste, sit harum impedit animi provident aliquam ipsum! Perferendis blanditiis officia velit porro, aut enim necessitatibus fugit? Odit quam omnis aliquid debitis, dolorem necessitatibus aperiam. Debitis dolorum molestiae earum, libero, dignissimos numquam dicta iure quia delectus iusto odio nostrum porro explicabo velit obcaecati accusantium necessitatibus aspernatur alias voluptates reprehenderit fugiat hic repudiandae optio. Dignissimos aut odio quos praesentium ducimus, quam itaque? Ullam, nesciunt. Ducimus officia, alias voluptate possimus eveniet animi sequi quos, accusantium repellat pariatur excepturi accusamus explicabo quaerat molestiae. Labore et officiis placeat atque consectetur a repudiandae praesentium quidem dicta incidunt quod officia nostrum, voluptatem ex corporis! Ullam dicta, inventore aliquid quia repellendus magni perferendis exercitationem cum modi pariatur ducimus culpa commodi, libero quae beatae! Quam quas at dolores porro. Facere eum possimus sapiente blanditiis laboriosam in necessitatibus ipsa tempora expedita, fugit voluptatibus porro non quis. Quas exercitationem at deleniti deserunt voluptate, mollitia dolore quasi pariatur magni ipsam voluptatem totam nesciunt in numquam! Totam voluptas fugiat dolore quae ratione, vero ullam, temporibus doloribus consequuntur hic sequi mollitia similique perferendis debitis ad officia exercitationem dicta doloremque ut aspernatur veniam? Iste quaerat porro vero magni eveniet maxime, earum nam labore beatae nobis illo tempora in recusandae voluptatum necessitatibus rem nemo, ex quos, facere eligendi! Voluptatibus quia vero neque, labore, dolorem nobis architecto pariatur nihil omnis accusantium eos aspernatur iste. Blanditiis.</p>
+        <p><strong>Pia: </strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere perferendis obcaecati quibusdam ipsam soluta commodi fugit quasi incidunt excepturi? Illum hic ipsa ipsam aperiam, nesciunt, repellat facere veniam quidem tempore ea saepe a id corrupti, accusantium ex ipsum soluta! Voluptatem placeat, facere illum quisquam vero vel illo laudantium libero, accusamus cumque, veritatis iure nesciunt sint autem suscipit temporibus corporis harum dolore perferendis numquam. Modi vitae quo ipsum hic dolore at eos facere, excepturi distinctio molestiae, quas odio! Labore vitae excepturi non fuga voluptates enim magnam, nam iusto voluptate sunt rem, assumenda libero ipsa eum explicabo dolores incidunt ea. Neque, molestiae veritatis repellat ut sequi animi obcaecati praesentium porro nemo placeat quia explicabo minus repellendus facilis? Amet non nemo dolorem error aperiam incidunt sint totam quod voluptatibus, vel numquam modi consequatur blanditiis adipisci commodi iure fugiat suscipit! Rem saepe modi dolor sint ut sunt tenetur debitis, quisquam repellendus dicta, commodi inventore quo pariatur laboriosam veritatis quos excepturi molestias quis earum fugit officiis perspiciatis odio labore.</p>
     </div>
     <div class="comment">
-        <p><strong>Bob:</strong> Så har man købt 5 VIP billet</p>
+        <p><strong>Bob: </strong> Så har man købt 5 VIP billet</p>
     </div>
     <div class="comment">
-        <p><strong>John Johnsen:</strong> er der nogle der vil købe billet til mig</p>
+        <p><strong>John Johnsen: </strong> er der nogle der vil købe billet til mig</p>
     </div>
            
         </div>
@@ -293,31 +293,34 @@ exit;
         </div>
       </div>
       <div class="comments" id="comments_2" style="display: none;">
-  <div class="comment-box">
-                <textarea  rows="1" cols="500" placeholder="Dit navn"></textarea>
-                <textarea rows="4" cols="500" placeholder="Skriv en kommentar"></textarea>
-                <button onclick="submitComment(2)">Indsend</button>
-            </div>
-    <div class="comment">
-        <p><strong>User1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-    </div>
-    <div class="comment">
-        <p><strong>User2:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-    <div class="comment">
-        <p><strong>User3:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div class="comment">
-        <p><strong>User4:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-    </div>
-    <div class="comment">
-        <p><strong>User5:</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-           
+        <div class="comment-box">
+          <textarea  rows="1" cols="500" placeholder="Dit navn"></textarea>
+          <textarea rows="4" cols="500" placeholder="Skriv en kommentar"></textarea>
+          <button onclick="submitComment(2)">Indsend</button>
         </div>
+        <div class="comment">
+          <p><strong>User1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="comment">
+          <p><strong>User2:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="comment">
+          <p><strong>User3:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="comment">
+          <p><strong>User4:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="comment">
+          <p><strong>User5:</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>    
+      </div>
     </div>
     
-    <div class="ad"></div>
+    <div class="containerEvent sponsor">
+      <div class="sponsorText">
+        <h3 class="centerText">Sponsor Placeholder</h3>
+      </div>
+    </div>
 
     <div class="containerEvent">
       <div class="headerEvent">
