@@ -80,8 +80,46 @@ exit;
                     <input type="submit" value="Log ud">
                 </div>
             </form>
-            <div class="createEvent">
-              <button> Create event</button>
+<!-- Create Event Modal -->
+<div id="createEventModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Create Event</h2>
+          
+            <div class="form-group">
+                <label for="eventName">Event Name:</label>
+                <input type="text" placeholder="Event Name" id="eventName" name="eventName" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDate">Event Date:</label>
+                <input type="date" id="eventDate" name="eventDate" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDescription">Event Description:</label>
+                <textarea id="eventDescription" placeholder="Event Description" name="eventDescription" rows="4" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="ticketPrice">Ticket Price:</label>
+                <input type="number" id="ticketPrice" placeholder="Ticket price" name="ticketPrice" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="Artisters">Artister</label>
+                <input type="text" id="Artisters" placeholder="Artist" name="Artisters" required>
+            </div>
+            <div class="form-group">
+        <label for="eventImage">Event Image:</label>
+        <input type="file" id="eventImage" name="eventImage" accept="image/*" required>
+      </div>
+            <div class="form-group">
+                <input type="submit" id="createEvent" value="Create the Event">
+            </div>
+    </div>
+</div>
+<!-- Button to open the modal -->
+
+<div class="createEvent">
+    <a id="openCreateEventModal">Create Event</a>
+</div>
         </div>
         <?php else: ?>
             <!-- Login formular -->
@@ -321,7 +359,7 @@ exit;
     <div class="containerEvent">
       <div class="headerEvent">
         <h2>GRENÅ BEACH PARTY</h2>
-      </div>
+        </div>
       <div class="side-by-side-container">
         <div class="left-side-top">
           <div class="gallery">
@@ -420,7 +458,7 @@ exit;
       </div>
     </div>
   </div>
-
+        </div>
   <footer>
     <h4>Copyright &copy; Festival Guiden 2024</h4>
   </footer>
