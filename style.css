@@ -124,6 +124,7 @@ header {
 /* --- ONLY FOR TEST USE --- */
 .test ul li {
   display: inline-block;
+  margin: 10px 0;
 }
 
 /* --- EVENT --- */
@@ -355,7 +356,7 @@ header {
 }
 
 .comment-box textarea {
-  width: 100%;
+  width: calc(100%);
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -371,6 +372,20 @@ header {
   border-radius: 5px;
   cursor: pointer;
   bottom: 5px;
+}
+
+.test2 {
+  width: 50px;
+}
+
+/* --- BUTTON --- */
+.btnEvent {
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 7px;
+  background-color: var(--main-bg-two-color);
+  color: #fff;
+  padding: 2px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -428,7 +443,7 @@ footer h4 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.createEvent{
+.createEvent {
   position: relative;
   right: 100px;
   bottom: 20px;
@@ -469,31 +484,31 @@ footer h4 {
   cursor: pointer;
 }
 
-#eventImage{
- position: relative;
- left: 600px;
- bottom: 20px;
- color: #000000;
+#eventImage {
+  position: relative;
+  left: 600px;
+  bottom: 20px;
+  color: #000000;
 }
-#ticketPrice{
+#ticketPrice {
   position: relative;
   right: 160px;
 }
-#eventDescription{
+#eventDescription {
   position: relative;
   right: 90px;
   top: 30px;
 }
-#createEvent{
+#createEvent {
   position: relative;
   left: 450px;
   top: 10px;
 }
-#eventName{
+#eventName {
   position: relative;
-  right:100px;
+  right: 100px;
 }
-#Artisters{
+#Artisters {
   position: relative;
   left: 110px;
   bottom: 20px;

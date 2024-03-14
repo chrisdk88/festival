@@ -140,6 +140,7 @@ exit;
         <li><a href="#" data-page="about">Om Os</a></li>
         <li><a href="#" data-page="contact">Kontakt</a></li>
         <li><a href="#" data-page="login">Login</a></li>
+        <li><a href="#" class="btnEvent" data-page="createEvent">Opret event</a></li>
       </ul>
     </div>
     
@@ -326,29 +327,30 @@ exit;
         </div>
       </div>
       <div class="comments" id="comments_2" style="display: none;">
-      <div class="comment-box">
-                <textarea name="name" rows="1" cols="30" placeholder="Dit navn"></textarea>
-                <textarea name="comment" rows="4" cols="500" placeholder="Tilføj din kommentar her..."></textarea>     
-                <button onclick="submitComment(2)">Indsend</button>
-      </div>
-      <div class="comment">
-          <p><strong>User1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      <div class="comment">
-          <p><strong>User2:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="comment">
-          <p><strong>User3:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
-      <div class="comment">
-          <p><strong>User4:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-      </div>
-      <div class="comment">
-          <p><strong>User5:</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-           
+        <div class="comment-box">
+                  <textarea name="name" rows="1" cols="30" placeholder="Dit navn"></textarea>
+                  <textarea name="comment" rows="4" cols="500" placeholder="Tilføj din kommentar her..."></textarea>     
+                  <button onclick="submitComment(2)">Indsend</button>
+        </div>
+        <div class="comment">
+            <p><strong>User1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="comment">
+            <p><strong>User2:</strong> Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="comment">
+            <p><strong>User3:</strong> Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        <div class="comment">
+            <p><strong>User4:</strong> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="comment">
+            <p><strong>User5:</strong> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
       </div>
+    </div>
+
+    <!-- Sponsor -->
     <div class="containerEvent sponsor">
       <div class="sponsorText">
         <h3 class="centerText">Sponsor Placeholder</h3>
