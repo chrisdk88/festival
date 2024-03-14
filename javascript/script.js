@@ -478,8 +478,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.addEventListener("DOMContentLoaded", checkLoginStatus);
 
-  updateContent("home");
-
   // This function will change the content div
   function addClickListener(elementId, page) {
     document.getElementById(elementId).addEventListener("click", function (e) {
@@ -498,6 +496,7 @@ document.addEventListener("DOMContentLoaded", function () {
       updateContent(page);
     });
   });
+  updateContent("home");
 });
 
 // Function to toggle the visibility of comments for a given box number
@@ -545,5 +544,3 @@ function submitComment(commentId) {
     "#comments_" + commentId + " textarea[name='comment']"
   ).value = "";
 }
-
-
