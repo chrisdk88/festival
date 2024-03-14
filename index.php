@@ -54,16 +54,6 @@ exit;
 }
 ?>
 
-<script>
-    function toggleComments(boxNumber) {
-      var comments = document.getElementById('comments_' + boxNumber);
-      if (comments.style.display === 'none') {
-        comments.style.display = 'block';
-      } else {
-        comments.style.display = 'none';
-      }
-    }
-  </script>
 <!DOCTYPE html>
 <html lang="da">
 <head>
@@ -190,10 +180,11 @@ exit;
         </div>
         
       </div>
+                  <!-- comment formular -->
       <div class="comments" id="comments_1" style="display: none;">
   <div class="comment-box">
-                <textarea  rows="1" cols="500" placeholder="Dit navn"></textarea>
-                <textarea rows="4" cols="500" placeholder="Skriv en kommentar"></textarea>                
+                <textarea name="name" rows="1" cols="30" placeholder="Dit navn"></textarea>
+                <textarea name="comment" rows="4" cols="500" placeholder="Tilføj din kommentar her..."></textarea>             
                 <button onclick="submitComment(1)">Indsend</button>
             </div>
     <div class="comment">
@@ -294,8 +285,8 @@ exit;
       </div>
       <div class="comments" id="comments_2" style="display: none;">
   <div class="comment-box">
-                <textarea  rows="1" cols="500" placeholder="Dit navn"></textarea>
-                <textarea rows="4" cols="500" placeholder="Skriv en kommentar"></textarea>
+                <textarea name="name" rows="1" cols="30" placeholder="Dit navn"></textarea>
+                <textarea name="comment" rows="4" cols="500" placeholder="Tilføj din kommentar her..."></textarea>     
                 <button onclick="submitComment(2)">Indsend</button>
             </div>
     <div class="comment">
@@ -399,9 +390,9 @@ exit;
       </div>
       <div class="comments" id="comments_3" style="display: none;">
   <div class="comment-box">
-  <textarea  rows="1" cols="500" placeholder="Dit navn"></textarea>
-                <textarea rows="4" cols="500" placeholder="Skriv en kommentar"></textarea>             
-                   <button onclick="submitComment(3)">Indsend</button>
+                  <textarea name="name" rows="1" cols="30" placeholder="Dit navn"></textarea>
+                  <textarea name="comment" rows="4" cols="500" placeholder="Tilføj din kommentar her..."></textarea>                 
+                  <button onclick="submitComment(3)">Indsend</button>
             </div>
     <div class="comment">
         <p><strong>User1:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
