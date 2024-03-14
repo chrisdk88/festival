@@ -287,6 +287,7 @@ exit;
           </div>
         </div>
       </div>
+      <div class="comments" id="comments_2" style="display: none;">
       <div class="comment-box">
                 <textarea name="name" rows="1" cols="30" placeholder="Dit navn"></textarea>
                 <textarea name="comment" rows="4" cols="500" placeholder="Tilføj din kommentar her..."></textarea>     
@@ -309,7 +310,7 @@ exit;
       </div>
            
         </div>
-    
+      </div>
     <div class="containerEvent sponsor">
       <div class="sponsorText">
         <h3 class="centerText">Sponsor Placeholder</h3>
