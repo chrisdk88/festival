@@ -80,6 +80,9 @@ exit;
                     <input type="submit" value="Log ud">
                 </div>
             </form>
+            <div class="createEvent">
+              <button> Create event</button>
+        </div>
         <?php else: ?>
             <!-- Login formular -->
             <form action="#" method="post">

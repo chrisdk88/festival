@@ -265,6 +265,7 @@ header {
   text-decoration: none;
   color: #000000;
 }
+/* --- rating start --- */
 
 .rating h3 {
   position: relative;
@@ -302,6 +303,7 @@ header {
   display: flex;
   flex-direction: row-reverse; 
 }
+/* --- rating end --- */
 
 
 .ad {
@@ -324,6 +326,7 @@ footer h4 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/* --- comment start --- */
 
 .comments{
   width: 1280px;
@@ -374,4 +377,8 @@ footer h4 {
     bottom: 5px;
   }
 
-  
+  .createEvent{
+    position: relative;
+    right: 200px;
+    bottom: 20px;
+  }
