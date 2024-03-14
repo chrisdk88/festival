@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       <div class="side-by-side-container-bottom">
         <div class="left-side-bottom">
-          <a href="#" class="eventBtn"onclick="toggleComments(1)">Kommentar</a>
+          <a  class="eventBtn"onclick="toggleComments(1)">Kommentar</a>
         </div>
         <div class="right-side-bottom">
           <div class="rating">
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       <div class="side-by-side-container-bottom">
         <div class="left-side-bottom">
-          <a href="#" class="eventBtn"onclick="toggleComments(2)">Kommentar</a>
+          <a  class="eventBtn"onclick="toggleComments(2)">Kommentar</a>
         </div>
         <div class="right-side-bottom">
           <div class="rating">
@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       <div class="side-by-side-container-bottom">
         <div class="left-side-bottom">
-          <a href="#" class="eventBtn"onclick="toggleComments(3)">Kommentar</a>
+          <a class="eventBtn"onclick="toggleComments(3)">Kommentar</a>
         </div>
         <div class="right-side-bottom">
           <div class="rating">
