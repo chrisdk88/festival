@@ -114,3 +114,39 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Function to toggle the visibility of comments for a given box number
+function toggleComments(boxNumber) {
+  // Get the comments container for the specified box number
+  let commentsContainer = document.getElementById('comments_' + boxNumber);
+  
+  // Toggle the visibility of the comments container
+  if (commentsContainer.style.display === 'none' || commentsContainer.style.display === '') {
+    // If comments are hidden or not set, show them by changing the display style to block
+    commentsContainer.style.display = 'block';
+  } else {
+    // If comments are visible, hide them by changing the display style to none
+    commentsContainer.style.display = 'none';
+  }
+}
+
+
+
+function submitComment(commentId) {
+  // Get the name and comment text
+  var name = document.querySelector("#comments_" + commentId + " textarea[name='name']").value;
+  var commentText = document.querySelector("#comments_" + commentId + " textarea[name='comment']").value;
+
+  // Create a new comment element
+  var newComment = document.createElement("div");
+  newComment.classList.add("comment");
+  newComment.innerHTML = "<p><strong>" + name + ":</strong> " + commentText + "</p>";
+
+  // Append the new comment to the comments section
+  var commentsSection = document.querySelector("#comments_" + commentId);
+  commentsSection.appendChild(newComment);
+
+  // Clear the textareas
+  document.querySelector("#comments_" + commentId + " textarea[name='name']").value = "";
+  document.querySelector("#comments_" + commentId + " textarea[name='comment']").value = "";
+}
+

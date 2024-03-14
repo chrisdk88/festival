@@ -268,6 +268,7 @@ header {
   text-decoration: none;
   color: #000000;
 }
+/* --- rating start --- */
 
 .rating h3 {
   position: relative;
@@ -313,6 +314,7 @@ header {
   height: 125px;
   position: relative;
 }
+/* --- rating end --- */
 
 .sponsorText {
   position: absolute;
