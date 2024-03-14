@@ -104,7 +104,8 @@ exit;
         <li><a href="#" data-page="login">Login</a></li>
       </ul>
     </div>
-
+    
+    <!-- THY ROCK -->
     <div class="containerEvent">
       <div class="headerEvent">
         <h2>THY ROCK</h2>
@@ -206,8 +207,9 @@ exit;
             <p><strong>John Johnsen: </strong> er der nogle der vil købe billet til mig</p>
         </div>       
       </div>
-
     </div>
+
+    <!-- ROSKILDE FESTIVAL -->
     <div class="containerEvent">
       <div class="headerEvent">
         <h2>ROSKILDE FESTIVAL</h2>
@@ -314,6 +316,7 @@ exit;
       </div>
     </div>
 
+    <!-- GRENÅ BEACH PARTY -->
     <div class="containerEvent">
       <div class="headerEvent">
         <h2>GRENÅ BEACH PARTY</h2>
